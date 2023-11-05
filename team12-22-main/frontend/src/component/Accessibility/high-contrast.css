@@ -1,0 +1,7 @@
+html.high-contrast {
+    filter: invert(100%) hue-rotate(180deg);
+}
+
+html.high-contrast img {
+    filter: invert(1%) hue-rotate(180deg);
+}

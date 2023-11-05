@@ -1,0 +1,22 @@
+1. Design and Plan Beforehand
+- Before you start coding, map out every single file and function, including the main method. 
+- This will streamline the development process, save tons of time, and reduce stress. 
+
+2. Use Test Driven Development
+- After you've mapped out how your functions and files are going to look like, write tests for all those functions. 
+- Think about what your function is supposed to do. Use automated tools like unittest. 
+
+3. Automate Everything
+- If a task is going to be repeated more than once, write a script to automate it or use a tool to automate it.
+- Goal is to free up all your time to focus on the important stuff, not the repetitive stuff. 
+
+4. Write Clean Code
+- Split your code into atomic functions, then bring them all together to execute a more complex task.
+- This bottom-up style of programming makes code easier to read, understand, and debug. 
+- Do not write large, sprawling functions. These are hard to debug and hard to understand. 
+
+5. Documentation 
+- Every single file you create should have a paragraph long explanation of what it does at the top. 
+- Every single function should have a 1-2 sentence explanation of what it does. 
+- Every single line of code should be commented. 
+- This makes your code more readable and debuggable. This benefits future you in addition to your fellow developers. 

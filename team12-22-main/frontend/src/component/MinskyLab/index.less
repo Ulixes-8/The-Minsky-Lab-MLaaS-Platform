@@ -1,0 +1,49 @@
+.min {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.desc {
+  width: 50%;
+  font-size: 30px;
+  text-align: center;
+  margin: auto;
+
+  .info {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .min {
+    font-size: 40px;
+  }
+
+  .desc {
+    width: 70%;
+    font-size: 24px;
+
+    .info {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .min {
+    font-size: 30px;
+  }
+
+  .desc {
+    width: 90%;
+    font-size: 20px;
+
+    .info {
+      font-size: 14px;
+    }
+  }
+}

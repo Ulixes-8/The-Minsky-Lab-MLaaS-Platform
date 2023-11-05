@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  mysql-db:
+    image: mysql:8
+    ports:
+      - "3306:3306"
+    restart: unless-stopped
+    environment:
+        MYSQL_DATABASE: 'tp-db'
+        MYSQL_USER: 'django-user'
+        MYSQL_PASSWORD: 'SecurePassword123'
+        MYSQL_ROOT_PASSWORD: 'DatabaseR@@tPsswrd'

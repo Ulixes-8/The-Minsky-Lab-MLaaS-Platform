@@ -1,0 +1,248 @@
+#table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  padding-top: 30px;
+  margin-bottom: 1em;
+  }
+
+#table th, #table td {
+  text-align: center;
+  padding: 15px 1.5rem ;
+  box-shadow: 0 0 5px #17b0c1;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 9px;
+  box-shadow:inset 0 0 6px rgba(208, 208, 208, 0.502);
+  font-size: 18px;
+  margin: 1rem;
+}
+
+#table th {
+  background-color:#17b0c1;
+  color: #ffffff;
+  border-color: #d0e7ea;
+  margin-bottom: 1rem;
+}
+  
+  #table tbody tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  
+  #table tbody tr:hover, #table tbody tr.selected {
+    background-color: #424242;
+    box-shadow: 0 0 10px #17b0c1;
+    border-radius: 9px;
+    color: #fff;
+  }
+
+  .myLabText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }  
+  
+  .disclaimer-container {
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #919191;
+    border-radius: 30px;
+    box-shadow: 0 0 10px #17b0c1;
+    background: rgba(255, 255, 255, 0);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+  .disclaimer-container > h3 {
+    font-size: 24px;
+    padding: 15px 26px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  .mylabbtn-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    gap: 10%;
+    margin: 2em;
+  }
+  .modelSearch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .modelSearch button {
+    color: white;
+    font-weight: bold;
+    /*padding: 1rem;*/
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    align-content: center;
+    background-color: #333333;
+    -webkit-backdrop-filter: blur(8px);
+   backdrop-filter: blur(3px);
+   box-shadow:inset 0 0 6px #17b0c1;
+  }
+
+  .modelSearch input[type=text] {
+    padding: 15px;
+    -webkit-backdrop-filter: blur(8px);
+   backdrop-filter: blur(10px);
+   margin-left: 50px;
+   font-size: 16px;
+   margin: 1em;
+  }
+
+  .modelDelete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .modelPredict {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    align-content: center;
+    -webkit-backdrop-filter: blur(8px);
+   backdrop-filter: blur(8px);
+   box-shadow:inset 0 0 6px rgba(208, 208, 208, 0.502);
+  }
+
+  .xyz{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 3%;
+  }
+  #dataset {
+    background-color: #00cc99;
+  }
+
+  #predict {
+    background-color: #17b0c1;
+  }
+
+  #delete {
+    background-color: darkred;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  #fileButton {
+    background-color: #333333;
+  }
+
+  .infopage-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 200px);
+  }
+
+  .mylab-error-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .upload-page-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .reload-button {
+    background-color: #17b0c1;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .reload-button:hover {
+    background-color: #1499ac;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .upload-page-alert-message1, .upload-page-alert-message2{
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+  }
+
+@media screen and (max-width: 1024px) {
+  #table th, #table td {
+    padding: 10px 1rem;
+    font-size: 16px;
+    margin: 0.5rem;
+  }
+
+  .disclaimer-container > h3 {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+  }
+  .modelSearch button {
+
+  }
+  .mylabbtn-area {
+    flex-direction: column;
+    gap: 1em;
+    margin: 1em;
+  }
+
+  .modelSearch input[type=text] {
+    padding: 10px;
+    margin-left: 30px;
+    font-size: 14px;
+    margin: 0.5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #table th, #table td {
+    padding: 5px 0.5rem;
+    font-size: 14px;
+    margin: 0.25rem;
+  }
+
+  .disclaimer-container > h3 {
+    font-size: 18px;
+    padding: 5px 15px;
+    margin-bottom: 5px;
+  }
+
+  .modelSearch input[type=text] {
+    padding: 5px;
+    margin-left: 15px;
+    font-size: 12px;
+    margin: 0.25em;
+  }
+}
+

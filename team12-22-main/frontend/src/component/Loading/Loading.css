@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.loading-box {
+  width: 100vw;
+  height: 100vh;
+  background-color: #070504;
+  color: #fff;
+  z-index: 9999;
+}
+
+.loading-progress {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  -webkit-mask: linear-gradient(0deg, #000 50%, #0000 0) bottom/100% 15.38%;
+  background:
+    linear-gradient(#17b0c1 0 0) bottom/100% 0% no-repeat #ddd;
+  animation: p8 2s infinite steps(240);
+}
+
+@keyframes p8 {
+  100% {
+    background-size: 100% 115%
+  }
+}
+
+.loading-logo {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

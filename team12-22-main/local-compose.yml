@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  django-backend:
+    build:
+      context: .
+      dockerfile: ./docker/django_local/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+
+  react-frontend:
+    build:
+      context: .
+      dockerfile: ./docker/react_local/Dockerfile
+    depends_on:
+      - django-backend
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+  nginx-webserver:
+    build: ./docker/nginx_local
+    depends_on:
+      - django-backend
+      - react-frontend
+    ports:
+      - "80:80"
+      - "403:403"
+    restart: unless-stopped

@@ -1,0 +1,9 @@
+env/
+userfiles/
+.DS_Store
+./frontend/src/pages/SignUp.tsx
+#/backend/db.sqlite3
+#/backend/TeamProject/db.sqlite3
+/backend/main/migrations
+/docker/test/
+test-compose.yml

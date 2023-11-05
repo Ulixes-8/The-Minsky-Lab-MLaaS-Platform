@@ -1,0 +1,101 @@
+
+.layout-box {
+  width: 100%;
+  background-color: #070504;
+  color: #fff;
+  overflow: hidden;
+}
+
+.layout-title {
+  color: #fff;
+  font-size: 56px;
+  text-align: center;
+  height: 150px;
+  line-height: 150px;
+}
+
+.layout-foot {
+  background-color: #070504;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /*margin-top: 20px;*/
+  width: 100%;
+  text-align: center;
+  padding: 35px 0;
+}
+
+.data-context {
+  display: flex;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.data-context-title {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.data-context-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+  
+}
+.data-context-text {
+  border-radius: 20px;
+  color: #ffffff;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 25px;
+  box-shadow:inset 0 0 6px #17b0c1;
+}
+
+.chart-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.chart-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 25px;
+  box-shadow:inset 0 0 6px rgba(208, 208, 208, 0.502);
+}
+
+@media (max-width: 750px) {
+  .layout-title {
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  .data-context {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+  }
+
+  .data-context-title {
+    width: 100%;
+    text-align: center;
+  }
+}

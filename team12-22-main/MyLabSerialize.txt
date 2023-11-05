@@ -1,0 +1,30 @@
+SERIALIZE 
+
+import pickle
+from sklearn.linear_model import LinearRegression
+
+# Create and train a scikit-learn model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Serialize the model using pickle
+pickled_model = pickle.dumps(model)
+
+# Store the pickled model in a Django BinaryField
+my_model = Model.objects.create(ModelID='1', Model=pickled_model)
+
+
+
+DESERIALIZE 
+
+import pickle
+
+# Retrieve the pickled model from the database
+my_model = Model.objects.get(ModelID='1')
+pickled_model = my_model.Model
+
+# Deserialize the model using pickle
+model = pickle.loads(pickled_model)
+
+# Use the deserialized model to make predictions
+y_pred = model.predict(X_test)

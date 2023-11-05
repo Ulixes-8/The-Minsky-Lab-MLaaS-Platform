@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  mysql-db:
+    image: mysql:8
+    command: --max_allowed_packet=524288000
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: 'tp-db'
+      MYSQL_USER: 'django-user'
+      MYSQL_PASSWORD: 'SecurePassword123'
+      MYSQL_ROOT_PASSWORD: 'DatabaseR@@tPsswrd'
+
+  django-backend:
+    build:
+      context: .
+      dockerfile: ./docker/django/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - mysql-db
+    ports:
+      - "8000:8000"
+
+#  react-frontend:
+#    build:
+#      context: .
+#      dockerfile: ./docker/react/Dockerfile
+#    depends_on:
+#      - django-backend
+#    ports:
+#      - "3000:3000"
+#    restart: unless-stopped
+
+  nginx:
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - django-backend
+    restart: unless-stopped
+
+volumes:
+  mysql_data:

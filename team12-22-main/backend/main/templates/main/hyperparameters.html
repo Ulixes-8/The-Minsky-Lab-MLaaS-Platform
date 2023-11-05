@@ -1,0 +1,33 @@
+<!-- hyperparameters.html -->
+
+<form action="{% url 'training' %}" method="post">
+    {% csrf_token %}
+    <label for="numNeurons">Number of neurons:</label>
+    <input type="text" id="numNeurons" name="numNeurons" value="{{ numNeurons }}" required>
+    <label for="actFunc">Activation function:</label>
+    <select id="actFunc" name="actFunc" required>
+        <option value="" {% if not actFunc %}selected{% endif %}></option>
+        <option value="identity" {% if actFunc == "identity" %}selected{% endif %}>Identity</option>
+        <option value="logistic" {% if actFunc == "logistic" %}selected{% endif %}>Logistic</option>
+        <option value="tanh" {% if actFunc == "tanh" %}selected{% endif %}>Tanh</option>
+        <option value="relu" {% if actFunc == "relu" %}selected{% endif %}>ReLU</option>
+    </select>
+    <label for="solver">Solver:</label>
+    <select id="solver" name="solver" required>
+        <option value="" {% if not solver %}selected{% endif %}></option>
+        <option value="lbfgs" {% if solver == "lbfgs" %}selected{% endif %}>LBFGS</option>
+        <option value="sgd" {% if solver == "sgd" %}selected{% endif %}>SGD</option>
+        <option value="adam" {% if solver == "adam" %}selected{% endif %}>Adam</option>
+    </select>
+    <label for="lrInit">Initial learning rate:</label>
+    <input type="text" id="lrInit" name="lrInit" value="{{ lrInit }}" required>
+    <input type="submit" value="Train and Evaluate">
+</form>
+
+{% if accuracy %}
+    <p>Accuracy: {{ accuracy }}</p>
+    <p>Precision: {{ precision }}</p>
+    <p>Recall: {{ recall }}</p>
+    <p>F1: {{ f1 }}</p>
+    <a href="{% url 'training' %}?numNeurons={{ numNeurons }}&actFunc={{ actFunc }}&solver={{ solver }}&lrInit={{ lrInit }}&retrain=true">Retrain</a>
+{% endif %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Evaluation</h1>
+    
+    {% if mae %}
+    <h2>Mean Absolute Error: {{ mae }}</h2>
+    {% else %}
+    <h2>Accuracy: {{ accuracy }}</h2>
+    <h2>Precision: {{ precision }}</h2>
+    <h2>Recall: {{ recall }}</h2>
+    <h2>F1 Score: {{ f1 }}</h2>
+    {% endif %}
+
+    <h3>Plot:</h3>
+    <img src="data:image/png;base64,{{ plot }}" alt="Evaluation Plot">
+    
+    <h3>Choose an option:</h3>
+    <form method="POST" action="{% url 'post_evaluation' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="nn_name">Neural Network Name:</label>
+            <input type="text" name="nn_name" id="nn_name" class="form-control" placeholder="Enter a name for the neural network" required>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="action" id="save_and_retrain" value="save_and_retrain" required>
+            <label class="form-check-label" for="save_and_retrain">Save and Retrain</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="action" id="discard_and_retrain" value="discard_and_retrain">
+            <label class="form-check-label" for="discard_and_retrain">Discard and Retrain</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="action" id="save_and_continue" value="save_and_continue">
+            <label class="form-check-label" for="save_and_continue">Save and Continue</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

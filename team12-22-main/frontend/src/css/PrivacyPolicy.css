@@ -1,0 +1,109 @@
+.privacy-box {
+  background-color: #121315;
+  width: 95%;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 15px auto;
+  overflow: hidden;
+  height: auto;
+}
+
+.privacy-title {
+  font-size: 46px;
+  text-align: center;
+  line-height: 46px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #f8f8f8;
+  position: sticky;
+  top: 0;
+  background-color: #121315;
+}
+
+.privacy-content {
+  display: flex;
+  height: calc(100vh - 130px);
+  overflow: hidden;
+}
+
+.privacy-left {
+  width: 20%;
+  border-right: 1px #f8f8f8 solid;
+  margin-top: 20px;
+  position: sticky;
+  top: 70px;
+  /* position: relative; */
+}
+
+/* .privacy-left-content {
+  position: fixed;
+  width: 18%;
+} */
+
+.privacy-left-content > a:hover {
+  color: #808080;
+}
+
+.privacy-left-content>a {
+  line-height: 40px;
+  display: block;
+  padding-left: 10px;
+}
+
+.privacy-right {
+  flex: 1;
+  margin-top: 30px;
+  padding: 10px 20px;
+  overflow-y: auto;
+  /* overflow-y: scroll; */
+}
+
+.privacy-acitve {
+  color: #000;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.privacy-title-acitve {
+  animation-name: highlight;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+@media screen and (max-width: 768px) {
+  .privacy-box {
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  }
+
+  .privacy-title {
+  font-size: 24px;
+  line-height: 24px;
+  padding-bottom: 15px;
+  }
+
+  .privacy-content {
+  flex-direction: column;
+  height: auto;
+  }
+
+  .privacy-left {
+  width: 100%;
+  border: none;
+  position: static;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid #f8f8f8;
+  }
+
+  .privacy-right {
+  margin-top: 0;
+  padding: 5px;
+  }
+
+  .privacy-left-content > a {
+  line-height: 30px;
+  padding-left: 5px;
+  font-size: 16px;
+  }
+}

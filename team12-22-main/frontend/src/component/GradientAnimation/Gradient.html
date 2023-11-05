@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Stripe Gradient</title>
+        <script src="Gradient.js" ></script>
+    </head>
+    <style>
+        body {
+            margin:0;
+            padding:0;
+        }
+        #gradient-canvas {
+            --gradient-color-1: #010c63;
+            --gradient-color-2: #000010;
+            --gradient-color-3: #000052;
+            --gradient-color-4: #000000;
+
+        }
+    </style>
+    <body>
+        <canvas id="gradient-canvas" style="width:100vw;height:100vh"></canvas>
+        <script>
+            var gradient = new Gradient()
+            gradient.initGradient('#gradient-canvas');
+        </script>
+    </body>
+</html>

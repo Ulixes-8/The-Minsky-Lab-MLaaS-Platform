@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Lab | The Minsky Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>The Minsky Lab</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="my-lab.html">My Lab</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="my-models">
+      <h2>All your models in one place</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Performance Metrics</th>
+            <th>Hyperparameters</th>
+            <th>Date of Creation</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Model 1</td>
+            <td>Classification</td>
+            <td>Accuracy: 0.85</td>
+            <td>C: 1, gamma: 0.1</td>
+            <td>03/08/2023</td>
+            <td>
+              <button>Edit</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Model 2</td>
+            <td>Regression</td>
+            <td>RMSE: 2.3</td>
+            <td>Learning Rate: 0.01, Num. of Trees: 100</td>
+            <td>03/01/2023</td>
+            <td>
+              <button>Edit</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+          <!-- Add more rows for each model -->
+        </tbody>
+      </table>
+    </section>
+    <section id="predict">
+      <h2>Predict</h2>
+      <form>
+        <label for="input1">Input 1:</label>
+        <input type="text" id="input1" name="input1" required>
+        <br>
+        <label for="input2">Input 2:</label>
+        <input type="text" id="input2" name="input2" required>
+        <br>
+        <!-- Add more input fields as needed for each feature -->
+        <button type="submit">Generate Prediction</button>
+        <button type="reset">Clear</button>
+      </form>
+      <div id="prediction-result">
+        <h3>Prediction Result</h3>
+        <p>Predicted Label: <span id="predicted-label"></span></p>
+        <p>Confidence Level: <span id="confidence-level"></span></p>
+        <div id="prediction-chart"></div>
+        <!-- Add more elements for visualization as needed -->
+        <button id="save-prediction">Save Prediction</button>
+        <button id="download-prediction">Download Prediction</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 The Minsky Lab</p

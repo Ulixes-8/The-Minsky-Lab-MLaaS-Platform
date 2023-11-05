@@ -1,0 +1,145 @@
+.radioitem {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.radioitem .check-item {
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+  background: #f5f5f5;
+  border: 2px solid #c3c6ce;
+  position: relative;
+  padding: 1.8rem 1.8rem 2.2rem 1.8rem;
+  transition: 0.5s ease-out;
+  overflow: visible;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  display: inline-block;
+  text-align: center;
+}
+
+.radioitem .check-item .title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.radioitem .check-item:hover {
+  border-color: #17b0c1;
+}
+
+.radioitem .checkmark-ticked {
+  content: "✔";
+  font-size: 18px;
+  color: white;
+}
+
+.radioitem .check-item label {
+  color: black;
+  height: 100%;
+  gap: .5em;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.radioitem .check-item .text {
+  color: rgb(134, 134, 134);
+  text-align: left;
+  height: 100%;
+  transition: 0.35s ease-out;
+}
+
+.radioitem .check-item:hover .text,
+.radioitem .check-item input:checked + label .text {
+  color: #000;
+}
+
+.radioitem .check-item input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.radioitem .check-item .checkmark {
+  display: inline-block;
+  background-color: #f5f5f5;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 3px solid #c3c6ce;
+  transition: 0.35s ease-out;
+  cursor: pointer;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  opacity: 0;
+}
+
+.radioitem .check-item:hover .checkmark {
+  border-color: #17b0c1;
+  transform: translate(-50%, 0%);
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
+
+.radioitem .check-item input:checked + label .checkmark {
+  opacity: 1;
+  transform: translate(-50%, 0%);
+  background-color: #17b0c1;
+  border-color: #17b0c1;
+  color: #fff;
+}
+
+/* Neural network theme */
+.check-item.nn-theme {
+  color: #fff;
+}
+
+.check-item.nn-theme label {
+  display: flex;
+  align-items: center;
+}
+
+.check-item.nn-theme input[type="radio"] {
+  margin-right: 10px;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.check-item.nn-theme input[type="radio"]:checked {
+  background-color: #fff;
+}
+
+.check-item.nn-theme input[type="radio"]:checked::before {
+  content: "\2714";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  font-size: 16px;
+  color: #000;
+}
+
+@media only screen and (max-width: 576px) {
+  .radioitem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .radioitem .check-item {
+    margin-right: 0;
+  }
+}
