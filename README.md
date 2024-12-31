@@ -4,6 +4,8 @@
  of past employee attributes (such as MBTI, degree, years of prior experience, age, etc.) and their total
  commission income generated (target variable), leading to several new hires.
 
+A comprehensive description of the application can be found [here](https://drive.google.com/file/d/1U6jN0tTmCIBhwDEHiS2kBKDvZJZmsYeh/view?usp=sharing).
+
 # The Minsky Lab
 ## Running the Project on a Local Machine
 ### Using Docker
