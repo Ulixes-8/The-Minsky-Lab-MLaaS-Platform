@@ -1,3 +1,9 @@
+ 2023 — “The Minsky Lab” MLaaS Platform (Team Project — Final Mark: 87%)– Led development of an end-to-end Machine Learning as a Service (MLaaS) platform for small businesses
+ seeking data-driven decision-making as the elected team leader. We earned highest mark in cohort (87%).– Single-handedly developed the four core backend services of the platform: (1) Data Preprocessing, (2)
+ Feature Ranking, (3) Neural Network Building, and (4) Neural Network Serving.– Utilized Python, Django, MySQL, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, and Pickle.– A Dubai real estate firm used the platform to develop a neural network for hiring based on a dataset
+ of past employee attributes (such as MBTI, degree, years of prior experience, age, etc.) and their total
+ commission income generated (target variable), leading to several new hires.
+
 # The Minsky Lab
 ## Running the Project on a Local Machine
 ### Using Docker
